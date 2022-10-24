@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ufw enable
+ufw default deny incoming
+ufw default deny outgoing
+ufw default deny forward
+ufw allow out on enp8s0 to 94.140.14.14 proto udp port 53
+ufw allow out on enp8s0 to any proto tcp port 80
+ufw allow out on enp8s0 to any proto tcp port 443
